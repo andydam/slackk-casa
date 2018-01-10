@@ -1,11 +1,12 @@
 language: node_js
 node_js:
-  - "node"
+  - "stable"
 before_install:
   - export DATABASE_URL="postgresql://test:test@localhost/slackkcasa"
   - export NPM_CONFIG_PRODUCTION=false
   - export INITIALIZEDB=true
-  - npm i -g npm@5.5.1
+  - npm install -g npm@5.5.1
+  - npm install -g node-tar@4.0.1
 install:
   - npm install
   - webpack -p
